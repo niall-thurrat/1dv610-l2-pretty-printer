@@ -1,0 +1,28 @@
+{
+  "name": "pretty-print3r",
+  "version": "1.0.0",
+  "description": "A module to print parsed elements of text documents",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niall-thurrat/1dv610-l2-pretty-printer.git"
+  },
+  "keywords": [
+    "pretty",
+    "printer",
+    "text",
+    "document",
+    "parsed"
+  ],
+  "author": "Niall Thurrat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niall-thurrat/1dv610-l2-pretty-printer/issues"
+  },
+  "homepage": "https://github.com/niall-thurrat/1dv610-l2-pretty-printer#readme"
+}
