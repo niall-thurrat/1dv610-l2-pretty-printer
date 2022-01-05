@@ -1,7 +1,9 @@
-import Document from 'doc-pars3r'
+import Parser from 'doc-pars3r'
 
-const doc = new Document()
-doc.parse('Hello world.')
-const sentences = doc.getAllSentences()
+const parser = new Parser()
+const doc = parser.parseDocument('one sentence. two sentences? three sentences!') // TODO get input from start script
+const sentences = doc.getSentences()
 
-console.log(`Test sentecnces: ${sentences}`)
+sentences.forEach(s =>
+  console.log(s.toString())
+)
