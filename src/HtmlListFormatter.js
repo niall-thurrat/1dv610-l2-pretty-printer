@@ -1,9 +1,9 @@
 export default class HtmlListFormatter {
-  #htmlListItems = [] // TODO make this a collection class of HtmlListItem objects that have a toString() function
+  #listItems = [] // TODO make this a collection class of ListItem objects with a toString() function
   #htmlStr = ''
   
   constructor(parsedDoc) {
-    this.#setHtmlListItems(parsedDoc)
+    this.#setListItems(parsedDoc)
     this.#setHtmlStr()
   }
   
@@ -11,21 +11,31 @@ export default class HtmlListFormatter {
     return this.#htmlStr
   }
 
-  #setHtmlListItems(parsedDoc) {
+  #setListItems(parsedDoc) {
     const sentences = parsedDoc.getSentences()
 
     sentences.forEach(s => {
       const endType = s.getEndPunctuation()
 
       if (endType === '.')
-        this.#htmlListItems.push(`<li class="regular">${s.toString()}</li>`)
+        this.#listItems.push(`<li class="regular">${s.toString()}</li>`)
       else if (endType === '?')
-        this.#htmlListItems.push(`<li class="question">${s.toString()}</li>`)
+        this.#listItems.push(`<li class="question">${s.toString()}</li>`)
       else if (endType === '!')
-        this.#htmlListItems.push(`<li class="exclamation">${s.toString()}</li>`)
+        this.#listItems.push(`<li class="exclamation">${s.toString()}</li>`)
       // else 
         // TODO throw exception if unrecognised sentence type
     })
+  }
+
+  #getListItemsStr() {
+    let listStr = ''
+    
+    this.#listItems.forEach(li => {
+      listStr += li + '\n'
+    })
+
+    return listStr
   }
 
   #setHtmlStr() {
@@ -47,7 +57,7 @@ export default class HtmlListFormatter {
       <body>\n
       \n
       <ol type="a">\n
-      ${this.#htmlListItems[0]}\n
+      ${this.#getListItemsStr()}
       </ol>\n
       \n
       </body>\n
