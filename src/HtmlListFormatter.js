@@ -39,29 +39,28 @@ export default class HtmlListFormatter {
   }
 
   #setHtmlStr() {
-    this.#htmlStr = `<!DOCTYPE html>\n
-      <html>\n
-      <head>\n
-      <style>\n
-      .question {\n
-        font-weight: bold;\n
-      }\n
-      .exclamation {\n
-        color: red;\n
-      }\n
-      .regular {\n
-        font-style: italic;\n
-      }\n
-      </style>\n
-      </head>\n
-      <body>\n
-      \n
-      <ol type="a">\n
-      ${this.#getListItemsStr()}
-      </ol>\n
-      \n
-      </body>\n
-      </html>\n
-      `
+    this.#htmlStr = `<!DOCTYPE html>
+<html>
+<head>
+<style>
+.question {
+  font-weight: bold;
+}
+.exclamation {
+  color: red;
+}
+.regular {
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+<ol type="a">
+
+${this.#getListItemsStr()}
+</ol>
+</body>
+</html>
+`
   }
 }

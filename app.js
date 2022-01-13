@@ -10,6 +10,4 @@ const formatter = new HtmlListFormatter(doc)
 const htmlStr = formatter.getHtmlString()
 
 const printer = new Printer(htmlStr)
-printer.outputToConsole()
-
-// npm start 'one sentence. two sentences? three sentences!'
+printer.outputToFile()
