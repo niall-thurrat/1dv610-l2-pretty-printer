@@ -1,7 +1,6 @@
 import { expect } from 'chai'
 import Parser from 'doc-pars3r'
 import HtmlListFormatter from '../src/HtmlListFormatter.js'
-// import WriteError from '../src/exceptions/WriteError.js'
 
 const buildFormatter = (inputStr) => {
   const parser = new Parser()
