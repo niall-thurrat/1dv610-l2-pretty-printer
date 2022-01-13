@@ -1,11 +1,11 @@
 export default class Printer {
-    #testPropety
+    #output
     
-    constructor (tp) {
-      this.#testPropety = tp
+    constructor (outputStr) {
+      this.#output = outputStr
     }
     
-    printTest() {
-      console.log(`Here is my test string: ${this.#testPropety}`)
+    outputToConsole() {
+      console.log(`Here is my test output: ${this.#output}`)
     }
   }

@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/niall-thurrat/1dv610-l2-pretty-printer/issues"
   },
-  "homepage": "https://github.com/niall-thurrat/1dv610-l2-pretty-printer#readme"
+  "homepage": "https://github.com/niall-thurrat/1dv610-l2-pretty-printer#readme",
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  }
 }

@@ -1,9 +1,15 @@
 import Parser from 'doc-pars3r'
+import HtmlListFormatter from './src/HtmlListFormatter.js'
+import Printer from './src/Printer.js'
 
 const parser = new Parser()
-const doc = parser.parseDocument('one sentence. two sentences? three sentences!') // TODO get input from start script
-const sentences = doc.getSentences()
+const inputStr = process.argv[2]
+const doc = parser.parseDocument(inputStr)
 
-sentences.forEach(s =>
-  console.log(s.toString())
-)
+const formatter = new HtmlListFormatter(doc)
+const htmlStr = formatter.getHtmlString()
+
+const printer = new Printer(htmlStr)
+printer.outputToConsole()
+
+// npm start 'one sentence. two sentences? three sentences!'
