@@ -25,17 +25,13 @@ NOTE: pretty-print3r is under development and is not published to npm. THEREFORE
 git clone https://github.com/niall-thurrat/1dv610-l2-pretty-printer.git
 ```
 
-2. Install npm development dependencies from the root directory
-
-NOTE: this step is only necessary if you plan to run the test suite.
+2. Install npm dependencies from the root directory
 
 ```
 npm install
 ```
 
-3. Link the doc-pars3r npm package locally. This is Pretty-print3r's only dependency. See the *Using Doc-pars3r* section in [doc-pars3r README.md](https://gitlab.lnu.se/1dv610/student/nt222fc/l2/-/blob/master/README.md) for instructions.
-
-NOTE: steps 3 is necessary because doc-pars3r is not published to npm.
+3. Link the doc-pars3r npm package locally. This is one of Pretty-print3r's dependencies that is a non-published npm package. See the *Using Doc-pars3r* section in [doc-pars3r README.md](https://gitlab.lnu.se/1dv610/student/nt222fc/l2/-/blob/master/README.md) for instructions.
 
 4. Use a start script with a string argument that contains one or many sentences.
 
