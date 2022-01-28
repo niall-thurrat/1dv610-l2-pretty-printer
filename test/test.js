@@ -10,8 +10,8 @@ const buildFormatter = (inputStr) => {
 }
 
 describe('HtmlListFormatter', () => {
-  describe('TC1_Find_a_HTML_document_formatted_as_a_string', () => {
-    it('should be a string with the HTML doctype declaration \'<!DOCTYPE html>\'', () => {
+  describe('TC1_Find_a_HTML_document_formatted_as_a_string (Indata: \'a.\')', () => {
+    it('Expected outcome: a string with the HTML doctype declaration \'<!DOCTYPE html>\'', () => {
       const formatter = buildFormatter('a.')
 
       const htmlStr = formatter.getHtmlString()
@@ -20,8 +20,8 @@ describe('HtmlListFormatter', () => {
     })
   })
 
-  describe('TC2_Find_1_<li>_tag', () => {
-    it('should be a string containing \'<li\' once', () => {
+  describe('TC2_Find_1_<li>_tag (Indata: \'a.\')', () => {
+    it('Expected outcome: a string containing \'<li\' once', () => {
       const formatter = buildFormatter('a.')
 
       const htmlStr = formatter.getHtmlString()
@@ -32,8 +32,8 @@ describe('HtmlListFormatter', () => {
     })
   })
 
-  describe('TC3_Find_2_<li>_tags', () => {
-    it('should be a string containing \'<li\' twice', () => {
+  describe('TC3_Find_2_<li>_tags (Indata: \'a. b.\')', () => {
+    it('Expected outcome: a string containing \'<li\' twice', () => {
       const formatter = buildFormatter('a. b.')
 
       const htmlStr = formatter.getHtmlString()
@@ -44,8 +44,8 @@ describe('HtmlListFormatter', () => {
     })
   })
 
-  describe('TC4_Find_0_<li>_tags', () => {
-    it('should be a string not containing \'<li\'', () => {
+  describe('TC4_Find_0_<li>_tags (Indata: \'\')', () => {
+    it('Expected outcome: a string not containing \'<li\'', () => {
       const formatter = buildFormatter('')
 
       const htmlStr = formatter.getHtmlString()
@@ -56,8 +56,8 @@ describe('HtmlListFormatter', () => {
     })
   })
 
-  describe('TC5_Find_<li>_tags_for_different_sentence_types', () => {
-    it('should be a string with <li> tags containing classes \'regular\', \'question\' and \'exclamation\'', () => {
+  describe('TC5_Find_<li>_tags_for_different_sentence_types (Indata: \'a. b? c!\')', () => {
+    it('Expected outcome: a string with <li> tags containing classes \'regular\', \'question\' and \'exclamation\'', () => {
       const formatter = buildFormatter('a. b? c!')
 
       const htmlStr = formatter.getHtmlString()
@@ -66,8 +66,8 @@ describe('HtmlListFormatter', () => {
     })
   })
 
-  describe('TC6_Find_<li>_tag_with_correct_content', () => {
-    it('should be an <li> tag with content \'a.\'', () => {
+  describe('TC6_Find_<li>_tag_with_correct_content (Indata: \'a.\')', () => {
+    it('Expected outcome: an <li> tag with content \'a.\'', () => {
       const formatter = buildFormatter('a.')
 
       const htmlStr = formatter.getHtmlString()
