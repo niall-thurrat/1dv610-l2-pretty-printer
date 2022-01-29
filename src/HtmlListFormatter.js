@@ -23,8 +23,9 @@ export default class HtmlListFormatter {
         this.#listItems.push(`<li class="question">${s.toString()}</li>`)
       else if (endType === '!')
         this.#listItems.push(`<li class="exclamation">${s.toString()}</li>`)
-      // else 
-        // TODO throw exception if unrecognised sentence type
+      else 
+        // TODO throw a SyntaxError if unrecognised sentence type
+        throw new Error('sentence ends with unrecognised symbol')
     })
   }
 
